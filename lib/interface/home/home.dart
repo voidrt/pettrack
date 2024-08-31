@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:pet_track/interface/global/buttons/standard_button.dart';
 import 'package:pet_track/interface/global/text/standard_text.dart';
 import 'package:pet_track/interface/global/text_field.dart';
 
@@ -10,9 +12,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController petIdController = TextEditingController();
-    final TextEditingController userEmailController = TextEditingController();
-    final TextEditingController userPasswordController =
-        TextEditingController();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -71,7 +70,40 @@ class HomePage extends StatelessWidget {
             const StandardBodyText(
               'Acesse seu perfil e veja os pets cadastrados',
             ),
-            const Row(),
+            Padding(
+              padding: const EdgeInsets.only(top: Paddings.defaultSize),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  StandardButton(
+                    onTap: () {
+                      context.pushNamed('create-account');
+                    },
+                    text: 'Criar conta',
+                    foregroundColor: Colors.white,
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
+                    roundness: 15,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Paddings.defaultSize,
+                      vertical: Paddings.small,
+                    ),
+                  ),
+                  StandardButton(
+                    onTap: () {
+                      context.pushNamed('login');
+                    },
+                    text: 'Entrar',
+                    roundness: 15,
+                    foregroundColor: Colors.white,
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Paddings.defaultSize,
+                      vertical: Paddings.small,
+                    ),
+                  ),
+                ],
+              ),
+            ),
             const Spacer(),
           ],
         ),

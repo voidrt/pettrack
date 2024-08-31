@@ -48,8 +48,8 @@ class _AppTextFieldState extends State<AppTextField> {
         style: theme.textTheme.labelMedium!
             .copyWith(color: widget.foregroundColor ?? Colors.black),
         decoration: InputDecoration(
+          label: StandardBodyText(widget.labelText),
           hintText: widget.hintText,
-          label: StandardSubtitleText(widget.labelText),
           hintStyle: theme.textTheme.labelMedium!.copyWith(
             color: widget.foregroundColor ?? theme.colorScheme.inverseSurface,
           ),
