@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pet_track/core/routes.dart';
-import 'package:pet_track/interface/home/home.dart';
 import 'package:pet_track/theme/app_theme.dart';
 
 class PetTrack extends StatelessWidget {

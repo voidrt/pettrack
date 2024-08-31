@@ -7,7 +7,7 @@ class MasterNavigator {
     routes: [
       GoRoute(
         path: '/',
-        name: 'Auth Check',
+        name: 'home',
         builder: (context, state) => const HomePage(),
       ),
     ],

@@ -8,18 +8,21 @@ class PetTrackTextStyle {
     'Exo',
     fontSize: TextSizes.subtitle,
     fontWeight: FontWeight.w300,
+    color: AppColors.black,
   );
 
   static final bodyText = GoogleFonts.getFont(
     'Exo',
     fontSize: TextSizes.bodyTextSize,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w400,    color: AppColors.black,
+
   );
 
   static final headlineText = GoogleFonts.getFont(
     'Exo',
     fontSize: TextSizes.headlineTextSize,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w600,    color: AppColors.black,
+
   );
 }
 
