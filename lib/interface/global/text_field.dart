@@ -45,10 +45,12 @@ class _AppTextFieldState extends State<AppTextField> {
       child: TextField(
         controller: widget._controller,
         obscureText: widget.obscureText,
-        style: theme.textTheme.labelMedium!
-            .copyWith(color: widget.foregroundColor ?? Colors.black),
+        style: theme.textTheme.labelMedium!.copyWith(
+          color: widget.foregroundColor ?? Colors.black,
+        ),
         decoration: InputDecoration(
           label: StandardBodyText(widget.labelText),
+          labelStyle: Theme.of(context).textTheme.labelMedium,
           hintText: widget.hintText,
           hintStyle: theme.textTheme.labelMedium!.copyWith(
             color: widget.foregroundColor ?? theme.colorScheme.inverseSurface,

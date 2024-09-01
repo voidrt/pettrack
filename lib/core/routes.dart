@@ -1,7 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:pet_track/interface/auth/create_account/create_account.dart';
 import 'package:pet_track/interface/auth/login_to_account/login.dart';
-import 'package:pet_track/interface/home/home.dart';
+import 'package:pet_track/interface/home/user_home.dart';
+import 'package:pet_track/interface/start/home.dart';
 
 class MasterNavigator {
   static GoRouter appRouter = GoRouter(
@@ -21,6 +22,11 @@ class MasterNavigator {
         path: '/auth/login-to-account',
         name: 'login',
         builder: (context, state) => const LoginToAccountScreen(),
+      ),
+      GoRoute(
+        path: '/user-page',
+        name: 'user-page',
+        builder: (context, state) => const UserHomePage(),
       ),
     ],
   );

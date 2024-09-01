@@ -3,9 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:pet_track/interface/global/buttons/standard_button.dart';
 import 'package:pet_track/interface/global/text/standard_text.dart';
 import 'package:pet_track/interface/global/text_field.dart';
-import 'package:pet_track/interface/home/widgets/authentication_buttons.dart';
-import 'package:pet_track/interface/home/widgets/lost_pet_textform.dart';
-import 'package:pet_track/interface/home/widgets/page_header.dart';
+import 'package:pet_track/interface/start/widgets/authentication_buttons.dart';
+import 'package:pet_track/interface/start/widgets/lost_pet_textform.dart';
+import 'package:pet_track/interface/start/widgets/page_header.dart';
 
 import 'package:pet_track/theme/paddings.dart';
 

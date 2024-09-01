@@ -16,14 +16,14 @@ class HomePageHeader extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(100),
             child: Image.asset(
-              'assets/images/Atividade Wedley.JPG',
+              'assets/images/minhas vestimentas.jpg',
               height: 200,
               width: 200,
               fit: BoxFit.fill,
             ),
           ),
           const SizedBox(
-            height: Paddings.defaultSize,
+            height: Paddings.small,
           ),
           const StandardHeadlineText('Pet Trackr'),
           const StandardSubtitleText(
