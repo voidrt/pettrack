@@ -9,6 +9,7 @@ class PetTrack extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: PetTrackTheme.themeData,
+      debugShowCheckedModeBanner: false,
       routerConfig: MasterNavigator.appRouter,
       title: 'Pet Track',
     );

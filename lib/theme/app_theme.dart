@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_track/theme/paddings.dart';
 
 import 'colors.dart';
 import 'text_theme.dart';
@@ -22,6 +23,11 @@ class PetTrackTheme {
     highlightColor: Colors.transparent,
     buttonTheme: const ButtonThemeData(
       splashColor: Colors.transparent,
+    ),
+    dividerTheme: const DividerThemeData(
+      indent: Paddings.veryBig,
+      endIndent: Paddings.veryBig,
+      thickness: 0.5,
     ),
   );
 }
