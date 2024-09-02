@@ -55,7 +55,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               icon: Icon(LineIcons.cat, size: 25),
             ),
             Tab(
-              text: 'Perfil',
+              text: 'Meu Perfil',
               iconMargin: EdgeInsets.symmetric(vertical: 2),
               icon: Icon(LineIcons.user, size: 25),
             ),

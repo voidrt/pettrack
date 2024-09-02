@@ -7,7 +7,7 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Text('helo again'),
+        Text('Meu Perfil'),
       ],
     );
   }

@@ -4,6 +4,7 @@ import 'package:pet_track/core/routes.dart';
 import 'package:pet_track/interface/global/buttons/standard_button.dart';
 import 'package:pet_track/interface/global/text/standard_text.dart';
 import 'package:pet_track/interface/global/text_field.dart';
+import 'package:pet_track/interface/initial/widgets/page_header.dart';
 
 class LoginToAccountScreen extends StatelessWidget {
   const LoginToAccountScreen({super.key});
@@ -43,7 +44,7 @@ class LoginToAccountScreen extends StatelessWidget {
           ),
           StandardButton(
             onTap: () {
-              context.goNamed('user-page');
+              context.goNamed('home');
             },
             text: 'Login to Account',
             backgroundColor: Theme.of(context).colorScheme.primary,

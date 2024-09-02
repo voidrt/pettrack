@@ -24,8 +24,8 @@ class MasterNavigator {
         builder: (context, state) => const LoginToAccountScreen(),
       ),
       GoRoute(
-        path: '/user-page',
-        name: 'user-page',
+        path: '/home',
+        name: 'home',
         builder: (context, state) => const UserHomePage(),
       ),
     ],
