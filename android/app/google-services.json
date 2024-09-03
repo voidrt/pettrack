@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "55126646446",
+    "project_id": "pet-trackr-9626",
+    "storage_bucket": "pet-trackr-9626.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55126646446:android:38720a9bcda059c5a5573f",
+        "android_client_info": {
+          "package_name": "com.example.pet_track"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqS1MrT6zwW7brShP9hKXbaYqzj_jMtf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55126646446:android:cc561d959dddc806a5573f",
+        "android_client_info": {
+          "package_name": "com.example.pet_trackr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqS1MrT6zwW7brShP9hKXbaYqzj_jMtf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

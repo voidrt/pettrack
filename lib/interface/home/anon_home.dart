@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:pet_track/interface/global/buttons/standard_button.dart';
 import 'package:pet_track/interface/global/text/standard_text.dart';
-import 'package:pet_track/interface/global/text_field.dart';
 import 'package:pet_track/interface/initial/widgets/authentication_buttons.dart';
 import 'package:pet_track/interface/initial/widgets/lost_pet_textform.dart';
 import 'package:pet_track/interface/initial/widgets/page_header.dart';
-
 import 'package:pet_track/theme/paddings.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AnonymousHomePage extends StatelessWidget {
+  const AnonymousHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pet_track/core/models/user_model.dart';
-import 'package:pet_track/core/routes.dart';
 import 'package:pet_track/interface/global/buttons/standard_button.dart';
 import 'package:pet_track/interface/global/text_field.dart';
 import 'package:pet_track/interface/initial/widgets/page_header.dart';
