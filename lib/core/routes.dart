@@ -1,9 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:pet_track/interface/auth/create_account/create_account.dart';
 import 'package:pet_track/interface/auth/login_to_account/login.dart';
-import 'package:pet_track/interface/home/anon_home.dart';
 import 'package:pet_track/interface/home/user_home.dart';
-import 'package:pet_track/interface/initial/initial.dart';
+import 'package:pet_track/interface/initial/auth_check.dart';
 
 class MasterNavigator {
   static GoRouter appRouter = GoRouter(

@@ -43,12 +43,13 @@ class LoginToAccountScreen extends StatelessWidget {
           ),
           StandardButton(
             onTap: () {
-              AuthHelper().signInWithEmail(
+              AuthHelper().emailSignIn(
                 email: userEmailController.text,
                 password: userPasswordController.text,
               );
             },
             text: 'Login to Account',
+            foregroundColor: Theme.of(context).colorScheme.surface,
             backgroundColor: Theme.of(context).colorScheme.primary,
           ),
         ],

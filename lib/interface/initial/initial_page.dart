@@ -5,8 +5,8 @@ import 'package:pet_track/interface/initial/widgets/lost_pet_textform.dart';
 import 'package:pet_track/interface/initial/widgets/page_header.dart';
 import 'package:pet_track/theme/paddings.dart';
 
-class AnonymousHomePage extends StatelessWidget {
-  const AnonymousHomePage({super.key});
+class InitialPage extends StatelessWidget {
+  const InitialPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,7 @@ class AnonymousHomePage extends StatelessWidget {
               child: Divider(),
             ),
             LostPetTextform(controller: petIdController),
+            const SizedBox(height: Paddings.defaultSize),
             const StandardBodyText('ou'),
             const SizedBox(height: Paddings.big),
             const StandardBodyText(

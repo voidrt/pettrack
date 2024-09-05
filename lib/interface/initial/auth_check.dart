@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:pet_track/core/services/authentication_util.dart';
-import 'package:pet_track/interface/home/anon_home.dart';
+import 'package:pet_track/interface/initial/initial_page.dart';
 import 'package:pet_track/interface/home/user_home.dart';
 
 class AuthenticationCheck extends StatefulWidget {
@@ -17,9 +16,7 @@ class _AutenticationCheckState extends State<AuthenticationCheck> {
     return StreamBuilder<User?>(
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
-        return snapshot.hasData
-            ? const UserHomePage()
-            : const AnonymousHomePage();
+        return snapshot.hasData ? const UserHomePage() : const InitialPage();
       },
     );
   }

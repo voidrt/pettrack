@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_track/interface/global/text/standard_text.dart';
 import 'package:pet_track/theme/paddings.dart';
 
 class AppTextField extends StatefulWidget {
@@ -49,8 +48,8 @@ class _AppTextFieldState extends State<AppTextField> {
           color: widget.foregroundColor ?? Colors.black,
         ),
         decoration: InputDecoration(
-          label: StandardBodyText(widget.labelText),
           labelStyle: Theme.of(context).textTheme.labelMedium,
+          labelText: widget.labelText,
           hintText: widget.hintText,
           hintStyle: theme.textTheme.labelMedium!.copyWith(
             color: widget.foregroundColor ?? theme.colorScheme.inverseSurface,

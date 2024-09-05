@@ -3,6 +3,9 @@
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final Provider<AuthHelper> authHelperProvider = Provider((ref) => AuthHelper());
 
 class AuthHelper {
   final FirebaseAuth _firebaseInstance = FirebaseAuth.instance;
@@ -11,19 +14,11 @@ class AuthHelper {
 
   Stream<User?> get authStateChanges => _firebaseInstance.authStateChanges();
 
-  Future<int> signInWithEmail({required email, required password}) async {
-    try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      return 0;
-    } catch (e) {
-      log(
-        e.toString(),
-      );
-    }
-    return 0;
+  void emailSignIn({email, password}) async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
   }
 
   Future<int> createUserWithEmail({

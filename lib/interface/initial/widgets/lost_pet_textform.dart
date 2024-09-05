@@ -14,17 +14,21 @@ class LostPetTextform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const StandardBodyText(
-          'Encontrou um animal perdido?\nDigite abaixo as informacoes',
+          'Encontrou um animal perdido?',
+          padding: EdgeInsets.symmetric(
+            horizontal: Paddings.veryBig,
+          ),
         ),
         AppTextField(
-          labelText: '  Numero ou nome do animal',
+          labelText: '  Insira o codigo da coleira',
           controller,
           obscureText: false,
           padding: const EdgeInsets.symmetric(
-            vertical: Paddings.defaultSize,
-            horizontal: Paddings.extraBig,
+            vertical: Paddings.small,
+            horizontal: Paddings.veryBig,
           ),
         ),
       ],
