@@ -15,10 +15,10 @@ class UserHomePage extends StatelessWidget {
       initialIndex: 0,
       child: Scaffold(
         bottomNavigationBar: CustomNavigationBar(mediaQuerySize: screenSize),
-        body: const SafeArea(
+        body: SafeArea(
           child: TabBarView(
             children: [
-              UserPetsFeed(),
+              const UserPetsFeed(),
               UserProfile(),
             ],
           ),

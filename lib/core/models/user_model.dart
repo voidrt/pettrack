@@ -1,7 +1,7 @@
 import 'package:pet_track/core/models/pet_model.dart';
 
-class User {
-  User({
+class PetTrackUserModel {
+  PetTrackUserModel({
     required this.email,
     required this.name,
     required this.petsList,
@@ -9,9 +9,13 @@ class User {
 
   final String email;
   final String name;
-  final List<Pet>? petsList;
+  List<Pet>? petsList;
 
-  factory User.fromLogin(String email, String name, List<Pet>? petsList) {
-    return User(email: email, name: name, petsList: petsList ?? []);
+  factory PetTrackUserModel.fromLogin(
+      String email, String name, List<Pet>? petsList) {
+    return PetTrackUserModel(
+        email: email, name: name, petsList: petsList ?? []);
   }
+
+  set updatePetList(List<Pet> addedPets) => petsList = addedPets;
 }

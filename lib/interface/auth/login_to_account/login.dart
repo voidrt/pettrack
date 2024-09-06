@@ -1,5 +1,9 @@
+import 'dart:developer';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pet_track/core/models/user_model.dart';
 import 'package:pet_track/core/services/authentication_util.dart';
 import 'package:pet_track/interface/global/buttons/standard_button.dart';
 import 'package:pet_track/interface/global/text/standard_text.dart';
@@ -43,10 +47,14 @@ class LoginToAccountScreen extends StatelessWidget {
           ),
           StandardButton(
             onTap: () {
-              AuthHelper().emailSignIn(
-                email: userEmailController.text,
-                password: userPasswordController.text,
-              );
+              try {
+                AuthHelper().emailSignIn(
+                  email: userEmailController.text,
+                  password: userPasswordController.text,
+                );
+              } on FirebaseAuthException catch (e) {
+                log(e.toString());
+              }
             },
             text: 'Login to Account',
             foregroundColor: Theme.of(context).colorScheme.surface,

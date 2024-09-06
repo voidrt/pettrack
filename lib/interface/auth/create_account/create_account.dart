@@ -44,7 +44,7 @@ class CreateAccountScreen extends StatelessWidget {
             ),
             StandardButton(
                 onTap: () {
-                  User.fromLogin(
+                  PetTrackUserModel.fromLogin(
                     userEmailController.text,
                     userNameController.text,
                     [],
