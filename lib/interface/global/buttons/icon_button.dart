@@ -2,23 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:pet_track/interface/global/text/standard_text.dart';
 import 'package:pet_track/theme/paddings.dart';
 
-class StandardButton extends StatelessWidget {
-  const StandardButton({
+class LineIconButton extends StatelessWidget {
+  const LineIconButton({
     super.key,
     required this.onTap,
-    required this.text,
+    required this.icon,
     this.backgroundColor,
     this.foregroundColor,
     this.padding,
     this.margin,
-    this.roundness = 50.0,
-    this.leadingIcon,
+    this.roundness = 20.0,
   });
 
   final VoidCallback onTap;
-  final String text;
+  final IconData icon;
   final double roundness;
-  final IconData? leadingIcon;
   final Color? backgroundColor;
   final Color? foregroundColor;
   final EdgeInsetsGeometry? padding;
@@ -42,23 +40,13 @@ class StandardButton extends StatelessWidget {
         child: Center(
           child: Stack(
             children: [
-              Visibility(
-                visible: leadingIcon != null,
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: Paddings.extraSmall),
-                    child: Icon(leadingIcon),
-                  ),
-                ),
-              ),
               Align(
                 alignment: Alignment.center,
-                child: StandardBodyText(
-                  text,
+                child: Icon(
+                  icon,
                   color: foregroundColor,
                 ),
-              )
+              ),
             ],
           ),
         ),

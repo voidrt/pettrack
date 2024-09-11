@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:pet_track/core/models/user_model.dart';
 import 'package:pet_track/core/services/authentication_util.dart';
+import 'package:pet_track/interface/global/buttons/standard_button.dart';
 import 'package:pet_track/interface/global/text/standard_text.dart';
 import 'package:pet_track/interface/home/profile/widgets/user_info_row.dart';
 import 'package:pet_track/theme/paddings.dart';
@@ -19,17 +20,6 @@ class UserProfile extends ConsumerStatefulWidget {
 }
 
 class _UserProfileState extends ConsumerState<UserProfile> {
-  @override
-  void initState() {
-    widget.firebaseUserInstance = ref.watch(authHelperProvider).currentUser;
-    widget.petTrackerUserInstance = PetTrackUserModel.fromLogin(
-      widget.firebaseUserInstance!.email!,
-      widget.firebaseUserInstance!.displayName ?? '',
-      [],
-    );
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -57,6 +47,12 @@ class _UserProfileState extends ConsumerState<UserProfile> {
             ),
           ),
           const Divider(),
+          StandardButton(
+            onTap: () {
+              AuthHelper().signOut();
+            },
+            text: 'saia',
+          )
         ],
       ),
     );
